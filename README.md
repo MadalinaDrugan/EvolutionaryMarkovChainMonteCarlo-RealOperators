@@ -10,3 +10,5 @@ The two makefiles put the intup files together
 
 The statistical analysis is performed in R
 Examples of the output are the input for the R file 
+
+A precompiled binary was added

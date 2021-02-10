@@ -1,10 +1,10 @@
 # EvolutionaryMarkovChainMonteCarlo-RealOperators
 Population Markov chain Monte Carlo with read coded evolutionary operators
 
-Source code for the article 
+C++ and R source code for the article 
 
 Madalina M. Drugan, Dirk Thierens:
 Geometrical Recombination Operators for Real-Coded Evolutionary MCMCs. Evol. Comput. 18(2): 157-198 (2010)
 
-C++ source code
 The statistical analysis is performed in R
+Examples of the output are the input for the R file 

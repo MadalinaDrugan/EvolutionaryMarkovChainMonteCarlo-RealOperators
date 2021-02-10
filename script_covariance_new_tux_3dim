@@ -1,0 +1,502 @@
+
+ 
+d00<-data.matrix(read.table("../Runs/outMutOneChainSplit00"))
+d01<-data.matrix(read.table("../Runs/outMutOneChainSplit01"))
+d02<-data.matrix(read.table("../Runs/outMutOneChainSplit02"))
+d03<-data.matrix(read.table("../Runs/outMutOneChainSplit03"))
+d04<-data.matrix(read.table("../Runs/outMutOneChainSplit04"))
+d05<-data.matrix(read.table("../Runs/outMutOneChainSplit05"))
+d06<-data.matrix(read.table("../Runs/outMutOneChainSplit06"))
+d07<-data.matrix(read.table("../Runs/outMutOneChainSplit07"))
+d08<-data.matrix(read.table("../Runs/outMutOneChainSplit08"))
+d09<-data.matrix(read.table("../Runs/outMutOneChainSplit09"))
+ 
+cov00 <- cov(d00)
+cor00 <- cor(d00)
+
+cov01 <- cov(d01)
+cor01 <- cor(d01)
+
+cov02 <- cov(d02)
+cor02 <- cor(d02)
+
+cov03 <- cov(d03)
+cor03 <- cor(d03)
+
+cov04 <- cov(d04)
+cor04 <- cor(d04)
+
+cov05 <- cov(d05)
+cor05 <- cor(d05)
+
+cov06 <- cov(d06)
+cor06 <- cor(d06)
+
+cov07 <- cov(d07)
+cor07 <- cor(d07)
+
+cov08 <- cov(d08)
+cor08 <- cor(d08)
+
+cov09 <- cov(d09)
+cor09 <- cor(d09)
+
+covR <- matrix(nrow = 3, ncol = 3)
+corR <- matrix(nrow = 3, ncol = 3)
+
+covR[1,1] <- 0
+covR[1,1] <- covR[1,1] + cov00[1,1]
+covR[1,1] <- covR[1,1] + cov01[1,1]
+covR[1,1] <- covR[1,1] + cov02[1,1]
+covR[1,1] <- covR[1,1] + cov03[1,1]
+covR[1,1] <- covR[1,1] + cov04[1,1]
+covR[1,1] <- covR[1,1] + cov05[1,1]
+covR[1,1] <- covR[1,1] + cov06[1,1]
+covR[1,1] <- covR[1,1] + cov07[1,1]
+covR[1,1] <- covR[1,1] + cov08[1,1]
+covR[1,1] <- covR[1,1] + cov09[1,1]
+
+covR[2,2] <- 0
+covR[2,2] <- covR[2,2] + cov00[4,4]
+covR[2,2] <- covR[2,2] + cov01[4,4]
+covR[2,2] <- covR[2,2] + cov02[4,4]
+covR[2,2] <- covR[2,2] + cov03[4,4]
+covR[2,2] <- covR[2,2] + cov04[4,4]
+covR[2,2] <- covR[2,2] + cov05[4,4]
+covR[2,2] <- covR[2,2] + cov06[4,4]
+covR[2,2] <- covR[2,2] + cov07[4,4]
+covR[2,2] <- covR[2,2] + cov08[4,4]
+covR[2,2] <- covR[2,2] + cov09[4,4]
+
+covR[3,3] <- 0
+covR[3,3] <- covR[3,3] + cov00[7,7]
+covR[3,3] <- covR[3,3] + cov01[7,7]
+covR[3,3] <- covR[3,3] + cov02[7,7]
+covR[3,3] <- covR[3,3] + cov03[7,7]
+covR[3,3] <- covR[3,3] + cov04[7,7]
+covR[3,3] <- covR[3,3] + cov05[7,7]
+covR[3,3] <- covR[3,3] + cov06[7,7]
+covR[3,3] <- covR[3,3] + cov07[7,7]
+covR[3,3] <- covR[3,3] + cov08[7,7]
+covR[3,3] <- covR[3,3] + cov09[7,7]
+
+covR[1,2] <- 0
+covR[1,2] <- covR[1,2] + cov00[1,4]
+covR[1,2] <- covR[1,2] + cov01[1,4]
+covR[1,2] <- covR[1,2] + cov02[1,4]
+covR[1,2] <- covR[1,2] + cov03[1,4]
+covR[1,2] <- covR[1,2] + cov04[1,4]
+covR[1,2] <- covR[1,2] + cov05[1,4]
+covR[1,2] <- covR[1,2] + cov06[1,4]
+covR[1,2] <- covR[1,2] + cov07[1,4]
+covR[1,2] <- covR[1,2] + cov08[1,4]
+covR[1,2] <- covR[1,2] + cov09[1,4]
+
+covR[1,3] <- 0
+covR[1,3] <- covR[1,3] + cov00[1,7]
+covR[1,3] <- covR[1,3] + cov01[1,7]
+covR[1,3] <- covR[1,3] + cov02[1,7]
+covR[1,3] <- covR[1,3] + cov03[1,7]
+covR[1,3] <- covR[1,3] + cov04[1,7]
+covR[1,3] <- covR[1,3] + cov05[1,7]
+covR[1,3] <- covR[1,3] + cov06[1,7]
+covR[1,3] <- covR[1,3] + cov07[1,7]
+covR[1,3] <- covR[1,3] + cov08[1,7]
+covR[1,3] <- covR[1,3] + cov09[1,7]
+
+covR[2,1] <- 0
+covR[2,1] <- covR[2,1] + cov00[4,1]
+covR[2,1] <- covR[2,1] + cov01[4,1]
+covR[2,1] <- covR[2,1] + cov02[4,1]
+covR[2,1] <- covR[2,1] + cov03[4,1]
+covR[2,1] <- covR[2,1] + cov04[4,1]
+covR[2,1] <- covR[2,1] + cov05[4,1]
+covR[2,1] <- covR[2,1] + cov06[4,1]
+covR[2,1] <- covR[2,1] + cov07[4,1]
+covR[2,1] <- covR[2,1] + cov08[4,1]
+covR[2,1] <- covR[2,1] + cov09[4,1]
+
+covR[3,1] <- 0
+covR[3,1] <- covR[3,1] + cov00[7,1]
+covR[3,1] <- covR[3,1] + cov01[7,1]
+covR[3,1] <- covR[3,1] + cov02[7,1]
+covR[3,1] <- covR[3,1] + cov03[7,1]
+covR[3,1] <- covR[3,1] + cov04[7,1]
+covR[3,1] <- covR[3,1] + cov05[7,1]
+covR[3,1] <- covR[3,1] + cov06[7,1]
+covR[3,1] <- covR[3,1] + cov07[7,1]
+covR[3,1] <- covR[3,1] + cov08[7,1]
+covR[3,1] <- covR[3,1] + cov09[7,1]
+
+covR[2,3] <- 0
+covR[2,3] <- covR[2,3] + cov00[4,7]
+covR[2,3] <- covR[2,3] + cov01[4,7]
+covR[2,3] <- covR[2,3] + cov02[4,7]
+covR[2,3] <- covR[2,3] + cov03[4,7]
+covR[2,3] <- covR[2,3] + cov04[4,7]
+covR[2,3] <- covR[2,3] + cov05[4,7]
+covR[2,3] <- covR[2,3] + cov06[4,7]
+covR[2,3] <- covR[2,3] + cov07[4,7]
+covR[2,3] <- covR[2,3] + cov08[4,7]
+covR[2,3] <- covR[2,3] + cov09[4,7]
+
+covR[3,2] <- 0
+covR[3,2] <- covR[3,2] + cov00[7,4]
+covR[3,2] <- covR[3,2] + cov01[7,4]
+covR[3,2] <- covR[3,2] + cov02[7,4]
+covR[3,2] <- covR[3,2] + cov03[7,4]
+covR[3,2] <- covR[3,2] + cov04[7,4]
+covR[3,2] <- covR[3,2] + cov05[7,4]
+covR[3,2] <- covR[3,2] + cov06[7,4]
+covR[3,2] <- covR[3,2] + cov07[7,4]
+covR[3,2] <- covR[3,2] + cov08[7,4]
+covR[3,2] <- covR[3,2] + cov09[7,4]
+
+covR[1,1] <- covR[1,1] / 10
+covR[1,2] <- covR[1,2] / 10
+covR[1,3] <- covR[1,3] / 10
+
+covR[2,1] <- covR[2,1] / 10
+covR[2,2] <- covR[2,2] / 10
+covR[2,3] <- covR[2,3] / 10
+
+covR[3,1] <- covR[3,1] / 10
+covR[3,2] <- covR[3,2] / 10
+covR[3,3] <- covR[3,3] / 10
+
+
+
+
+
+
+
+
+corR[2,1] <- 0
+corR[2,1] <- corR[2,1] + cor00[4,1]
+corR[2,1] <- corR[2,1] + cor01[4,1]
+corR[2,1] <- corR[2,1] + cor02[4,1]
+corR[2,1] <- corR[2,1] + cor03[4,1]
+corR[2,1] <- corR[2,1] + cor04[4,1]
+corR[2,1] <- corR[2,1] + cor05[4,1]
+corR[2,1] <- corR[2,1] + cor06[4,1]
+corR[2,1] <- corR[2,1] + cor07[4,1]
+corR[2,1] <- corR[2,1] + cor08[4,1]
+corR[2,1] <- corR[2,1] + cor09[4,1]
+
+corR[3,1] <- 0
+corR[3,1] <- corR[3,1] + cor00[7,1]
+corR[3,1] <- corR[3,1] + cor01[7,1]
+corR[3,1] <- corR[3,1] + cor02[7,1]
+corR[3,1] <- corR[3,1] + cor03[7,1]
+corR[3,1] <- corR[3,1] + cor04[7,1]
+corR[3,1] <- corR[3,1] + cor05[7,1]
+corR[3,1] <- corR[3,1] + cor06[7,1]
+corR[3,1] <- corR[3,1] + cor07[7,1]
+corR[3,1] <- corR[3,1] + cor08[7,1]
+corR[3,1] <- corR[3,1] + cor09[7,1]
+
+corR[3,2] <- 0
+corR[3,2] <- corR[3,2] + cor00[7,4]
+corR[3,2] <- corR[3,2] + cor01[7,4]
+corR[3,2] <- corR[3,2] + cor02[7,4]
+corR[3,2] <- corR[3,2] + cor03[7,4]
+corR[3,2] <- corR[3,2] + cor04[7,4]
+corR[3,2] <- corR[3,2] + cor05[7,4]
+corR[3,2] <- corR[3,2] + cor06[7,4]
+corR[3,2] <- corR[3,2] + cor07[7,4]
+corR[3,2] <- corR[3,2] + cor08[7,4]
+corR[3,2] <- corR[3,2] + cor09[7,4]
+
+corR[2,1] <- corR[2,1] / 10
+corR[3,1] <- corR[3,1] / 10
+corR[3,2] <- corR[3,2] / 10
+
+
+stdV <- matrix(nrow=3,ncol=3)
+stdV[1,1] <- 0
+
+stdV[1,1] <- stdV[1,1] + (covR[1,1] - cov00[1,1])^2
+stdV[1,1] <- stdV[1,1] + (covR[1,1] - cov01[1,1])^2
+stdV[1,1] <- stdV[1,1] + (covR[1,1] - cov02[1,1])^2
+stdV[1,1] <- stdV[1,1] + (covR[1,1] - cov03[1,1])^2
+stdV[1,1] <- stdV[1,1] + (covR[1,1] - cov04[1,1])^2
+stdV[1,1] <- stdV[1,1] + (covR[1,1] - cov05[1,1])^2
+stdV[1,1] <- stdV[1,1] + (covR[1,1] - cov06[1,1])^2
+stdV[1,1] <- stdV[1,1] + (covR[1,1] - cov07[1,1])^2
+stdV[1,1] <- stdV[1,1] + (covR[1,1] - cov08[1,1])^2
+stdV[1,1] <- stdV[1,1] + (covR[1,1] - cov09[1,1])^2
+
+stdV[1,1] <- sqrt(stdV[1,1]/10)
+
+stdV[2,2] <- 0
+
+stdV[2,2] <- stdV[2,2] + (covR[2,2] - cov00[4,4])^2
+stdV[2,2] <- stdV[2,2] + (covR[2,2] - cov01[4,4])^2
+stdV[2,2] <- stdV[2,2] + (covR[2,2] - cov02[4,4])^2
+stdV[2,2] <- stdV[2,2] + (covR[2,2] - cov03[4,4])^2
+stdV[2,2] <- stdV[2,2] + (covR[2,2] - cov04[4,4])^2
+stdV[2,2] <- stdV[2,2] + (covR[2,2] - cov05[4,4])^2
+stdV[2,2] <- stdV[2,2] + (covR[2,2] - cov06[4,4])^2
+stdV[2,2] <- stdV[2,2] + (covR[2,2] - cov07[4,4])^2
+stdV[2,2] <- stdV[2,2] + (covR[2,2] - cov08[4,4])^2
+stdV[2,2] <- stdV[2,2] + (covR[2,2] - cov09[4,4])^2
+
+stdV[2,2] <- sqrt(stdV[2,2]/10)
+
+stdV[3,3] <- 0
+
+stdV[3,3] <- stdV[3,3] + (covR[3,3] - cov00[7,7])^2
+stdV[3,3] <- stdV[3,3] + (covR[3,3] - cov01[7,7])^2
+stdV[3,3] <- stdV[3,3] + (covR[3,3] - cov02[7,7])^2
+stdV[3,3] <- stdV[3,3] + (covR[3,3] - cov03[7,7])^2
+stdV[3,3] <- stdV[3,3] + (covR[3,3] - cov04[7,7])^2
+stdV[3,3] <- stdV[3,3] + (covR[3,3] - cov05[7,7])^2
+stdV[3,3] <- stdV[3,3] + (covR[3,3] - cov06[7,7])^2
+stdV[3,3] <- stdV[3,3] + (covR[3,3] - cov07[7,7])^2
+stdV[3,3] <- stdV[3,3] + (covR[3,3] - cov08[7,7])^2
+stdV[3,3] <- stdV[3,3] + (covR[3,3] - cov09[7,7])^2
+
+stdV[3,3] <- sqrt(stdV[3,3]/10)
+
+stdV[1,2] <- 0
+
+stdV[1,2] <- stdV[1,2] + (covR[1,2] - cov00[1,4])^2
+stdV[1,2] <- stdV[1,2] + (covR[1,2] - cov01[1,4])^2
+stdV[1,2] <- stdV[1,2] + (covR[1,2] - cov02[1,4])^2
+stdV[1,2] <- stdV[1,2] + (covR[1,2] - cov03[1,4])^2
+stdV[1,2] <- stdV[1,2] + (covR[1,2] - cov04[1,4])^2
+stdV[1,2] <- stdV[1,2] + (covR[1,2] - cov05[1,4])^2
+stdV[1,2] <- stdV[1,2] + (covR[1,2] - cov06[1,4])^2
+stdV[1,2] <- stdV[1,2] + (covR[1,2] - cov07[1,4])^2
+stdV[1,2] <- stdV[1,2] + (covR[1,2] - cov08[1,4])^2
+stdV[1,2] <- stdV[1,2] + (covR[1,2] - cov09[1,4])^2
+
+stdV[1,2] <- sqrt(stdV[1,2]/10)
+
+stdV[2,1] <- 0
+
+stdV[2,1] <- stdV[2,1] + (covR[2,1] - cov00[4,1])^2
+stdV[2,1] <- stdV[2,1] + (covR[2,1] - cov01[4,1])^2
+stdV[2,1] <- stdV[2,1] + (covR[2,1] - cov02[4,1])^2
+stdV[2,1] <- stdV[2,1] + (covR[2,1] - cov03[4,1])^2
+stdV[2,1] <- stdV[2,1] + (covR[2,1] - cov04[4,1])^2
+stdV[2,1] <- stdV[2,1] + (covR[2,1] - cov05[4,1])^2
+stdV[2,1] <- stdV[2,1] + (covR[2,1] - cov06[4,1])^2
+stdV[2,1] <- stdV[2,1] + (covR[2,1] - cov07[4,1])^2
+stdV[2,1] <- stdV[2,1] + (covR[2,1] - cov08[4,1])^2
+stdV[2,1] <- stdV[2,1] + (covR[2,1] - cov09[4,1])^2
+
+stdV[2,1] <- sqrt(stdV[2,1]/10)
+
+stdV[1,3] <- 0
+
+stdV[1,3] <- stdV[1,3] + (covR[1,3] - cov00[1,7])^2
+stdV[1,3] <- stdV[1,3] + (covR[1,3] - cov01[1,7])^2
+stdV[1,3] <- stdV[1,3] + (covR[1,3] - cov02[1,7])^2
+stdV[1,3] <- stdV[1,3] + (covR[1,3] - cov03[1,7])^2
+stdV[1,3] <- stdV[1,3] + (covR[1,3] - cov04[1,7])^2
+stdV[1,3] <- stdV[1,3] + (covR[1,3] - cov05[1,7])^2
+stdV[1,3] <- stdV[1,3] + (covR[1,3] - cov06[1,7])^2
+stdV[1,3] <- stdV[1,3] + (covR[1,3] - cov07[1,7])^2
+stdV[1,3] <- stdV[1,3] + (covR[1,3] - cov08[1,7])^2
+stdV[1,3] <- stdV[1,3] + (covR[1,3] - cov09[1,7])^2
+
+stdV[1,3] <- sqrt(stdV[1,3]/10)
+
+stdV[3,1] <- 0
+
+stdV[3,1] <- stdV[3,1] + (covR[3,1] - cov00[7,1])^2
+stdV[3,1] <- stdV[3,1] + (covR[3,1] - cov01[7,1])^2
+stdV[3,1] <- stdV[3,1] + (covR[3,1] - cov02[7,1])^2
+stdV[3,1] <- stdV[3,1] + (covR[3,1] - cov03[7,1])^2
+stdV[3,1] <- stdV[3,1] + (covR[3,1] - cov04[7,1])^2
+stdV[3,1] <- stdV[3,1] + (covR[3,1] - cov05[7,1])^2
+stdV[3,1] <- stdV[3,1] + (covR[3,1] - cov06[7,1])^2
+stdV[3,1] <- stdV[3,1] + (covR[3,1] - cov07[7,1])^2
+stdV[3,1] <- stdV[3,1] + (covR[3,1] - cov08[7,1])^2
+stdV[3,1] <- stdV[3,1] + (covR[3,1] - cov09[7,1])^2
+
+stdV[3,1] <- sqrt(stdV[3,1]/10)
+
+stdV[3,2] <- 0
+
+stdV[3,2] <- stdV[3,2] + (covR[3,2] - cov00[7,4])^2
+stdV[3,2] <- stdV[3,2] + (covR[3,2] - cov01[7,4])^2
+stdV[3,2] <- stdV[3,2] + (covR[3,2] - cov02[7,4])^2
+stdV[3,2] <- stdV[3,2] + (covR[3,2] - cov03[7,4])^2
+stdV[3,2] <- stdV[3,2] + (covR[3,2] - cov04[7,4])^2
+stdV[3,2] <- stdV[3,2] + (covR[3,2] - cov05[7,4])^2
+stdV[3,2] <- stdV[3,2] + (covR[3,2] - cov06[7,4])^2
+stdV[3,2] <- stdV[3,2] + (covR[3,2] - cov07[7,4])^2
+stdV[3,2] <- stdV[3,2] + (covR[3,2] - cov08[7,4])^2
+stdV[3,2] <- stdV[3,2] + (covR[3,2] - cov09[7,4])^2
+
+stdV[3,2] <- sqrt(stdV[3,2]/10)
+
+stdV[2,3] <- 0
+
+stdV[2,3] <- stdV[2,3] + (covR[2,3] - cov00[4,7])^2
+stdV[2,3] <- stdV[2,3] + (covR[2,3] - cov01[4,7])^2
+stdV[2,3] <- stdV[2,3] + (covR[2,3] - cov02[4,7])^2
+stdV[2,3] <- stdV[2,3] + (covR[2,3] - cov03[4,7])^2
+stdV[2,3] <- stdV[2,3] + (covR[2,3] - cov04[4,7])^2
+stdV[2,3] <- stdV[2,3] + (covR[2,3] - cov05[4,7])^2
+stdV[2,3] <- stdV[2,3] + (covR[2,3] - cov06[4,7])^2
+stdV[2,3] <- stdV[2,3] + (covR[2,3] - cov07[4,7])^2
+stdV[2,3] <- stdV[2,3] + (covR[2,3] - cov08[4,7])^2
+stdV[2,3] <- stdV[2,3] + (covR[2,3] - cov09[4,7])^2
+
+stdV[2,3] <- sqrt(stdV[2,3]/10)
+
+
+
+
+stdR <- matrix(nrow=3,ncol=3)
+stdR[1,1] <- 0
+
+stdR[1,1] <- stdR[1,1] + (corR[1,1] - cor00[1,1])^2
+stdR[1,1] <- stdR[1,1] + (corR[1,1] - cor01[1,1])^2
+stdR[1,1] <- stdR[1,1] + (corR[1,1] - cor02[1,1])^2
+stdR[1,1] <- stdR[1,1] + (corR[1,1] - cor03[1,1])^2
+stdR[1,1] <- stdR[1,1] + (corR[1,1] - cor04[1,1])^2
+stdR[1,1] <- stdR[1,1] + (corR[1,1] - cor05[1,1])^2
+stdR[1,1] <- stdR[1,1] + (corR[1,1] - cor06[1,1])^2
+stdR[1,1] <- stdR[1,1] + (corR[1,1] - cor07[1,1])^2
+stdR[1,1] <- stdR[1,1] + (corR[1,1] - cor08[1,1])^2
+stdR[1,1] <- stdR[1,1] + (corR[1,1] - cor09[1,1])^2
+
+stdR[1,1] <- sqrt(stdR[1,1]/10)
+
+stdR[2,2] <- 0
+
+stdR[2,2] <- stdR[2,2] + (corR[2,2] - cor00[4,4])^2
+stdR[2,2] <- stdR[2,2] + (corR[2,2] - cor01[4,4])^2
+stdR[2,2] <- stdR[2,2] + (corR[2,2] - cor02[4,4])^2
+stdR[2,2] <- stdR[2,2] + (corR[2,2] - cor03[4,4])^2
+stdR[2,2] <- stdR[2,2] + (corR[2,2] - cor04[4,4])^2
+stdR[2,2] <- stdR[2,2] + (corR[2,2] - cor05[4,4])^2
+stdR[2,2] <- stdR[2,2] + (corR[2,2] - cor06[4,4])^2
+stdR[2,2] <- stdR[2,2] + (corR[2,2] - cor07[4,4])^2
+stdR[2,2] <- stdR[2,2] + (corR[2,2] - cor08[4,4])^2
+stdR[2,2] <- stdR[2,2] + (corR[2,2] - cor09[4,4])^2
+
+stdR[2,2] <- sqrt(stdR[2,2]/10)
+
+
+stdR[1,2] <- 0
+
+stdR[1,2] <- stdR[1,2] + (corR[1,2] - cor00[1,4])^2
+stdR[1,2] <- stdR[1,2] + (corR[1,2] - cor01[1,4])^2
+stdR[1,2] <- stdR[1,2] + (corR[1,2] - cor02[1,4])^2
+stdR[1,2] <- stdR[1,2] + (corR[1,2] - cor03[1,4])^2
+stdR[1,2] <- stdR[1,2] + (corR[1,2] - cor04[1,4])^2
+stdR[1,2] <- stdR[1,2] + (corR[1,2] - cor05[1,4])^2
+stdR[1,2] <- stdR[1,2] + (corR[1,2] - cor06[1,4])^2
+stdR[1,2] <- stdR[1,2] + (corR[1,2] - cor07[1,4])^2
+stdR[1,2] <- stdR[1,2] + (corR[1,2] - cor08[1,4])^2
+stdR[1,2] <- stdR[1,2] + (corR[1,2] - cor09[1,4])^2
+
+stdR[1,2] <- sqrt(stdR[1,2]/10)
+
+stdR[2,1] <- 0
+
+stdR[2,1] <- stdR[2,1] + (corR[2,1] - cor00[4,1])^2
+stdR[2,1] <- stdR[2,1] + (corR[2,1] - cor01[4,1])^2
+stdR[2,1] <- stdR[2,1] + (corR[2,1] - cor02[4,1])^2
+stdR[2,1] <- stdR[2,1] + (corR[2,1] - cor03[4,1])^2
+stdR[2,1] <- stdR[2,1] + (corR[2,1] - cor04[4,1])^2
+stdR[2,1] <- stdR[2,1] + (corR[2,1] - cor05[4,1])^2
+stdR[2,1] <- stdR[2,1] + (corR[2,1] - cor06[4,1])^2
+stdR[2,1] <- stdR[2,1] + (corR[2,1] - cor07[4,1])^2
+stdR[2,1] <- stdR[2,1] + (corR[2,1] - cor08[4,1])^2
+stdR[2,1] <- stdR[2,1] + (corR[2,1] - cor09[4,1])^2
+
+stdR[2,1] <- sqrt(stdR[2,1]/10)
+
+stdR[3,2] <- 0
+
+stdR[3,2] <- stdR[3,2] + (corR[3,2] - cor00[7,4])^2
+stdR[3,2] <- stdR[3,2] + (corR[3,2] - cor01[7,4])^2
+stdR[3,2] <- stdR[3,2] + (corR[3,2] - cor02[7,4])^2
+stdR[3,2] <- stdR[3,2] + (corR[3,2] - cor03[7,4])^2
+stdR[3,2] <- stdR[3,2] + (corR[3,2] - cor04[7,4])^2
+stdR[3,2] <- stdR[3,2] + (corR[3,2] - cor05[7,4])^2
+stdR[3,2] <- stdR[3,2] + (corR[3,2] - cor06[7,4])^2
+stdR[3,2] <- stdR[3,2] + (corR[3,2] - cor07[7,4])^2
+stdR[3,2] <- stdR[3,2] + (corR[3,2] - cor08[7,4])^2
+stdR[3,2] <- stdR[3,2] + (corR[3,2] - cor09[7,4])^2
+
+stdR[3,2] <- sqrt(stdR[3,2]/10)
+
+stdR[3,1] <- 0
+
+stdR[3,1] <- stdR[3,1] + (corR[3,1] - cor00[7,1])^2
+stdR[3,1] <- stdR[3,1] + (corR[3,1] - cor01[7,1])^2
+stdR[3,1] <- stdR[3,1] + (corR[3,1] - cor02[7,1])^2
+stdR[3,1] <- stdR[3,1] + (corR[3,1] - cor03[7,1])^2
+stdR[3,1] <- stdR[3,1] + (corR[3,1] - cor04[7,1])^2
+stdR[3,1] <- stdR[3,1] + (corR[3,1] - cor05[7,1])^2
+stdR[3,1] <- stdR[3,1] + (corR[3,1] - cor06[7,1])^2
+stdR[3,1] <- stdR[3,1] + (corR[3,1] - cor07[7,1])^2
+stdR[3,1] <- stdR[3,1] + (corR[3,1] - cor08[7,1])^2
+stdR[3,1] <- stdR[3,1] + (corR[3,1] - cor09[7,1])^2
+
+stdR[3,1] <- sqrt(stdR[3,1]/10)
+
+rotCov <- 0
+
+rotCov <- rotCov + cov00[1,1]/cov00[4,4]
+rotCov <- rotCov + cov01[1,1]/cov01[4,4]
+rotCov <- rotCov + cov02[1,1]/cov02[4,4]
+rotCov <- rotCov + cov03[1,1]/cov03[4,4]
+rotCov <- rotCov + cov04[1,1]/cov04[4,4]
+rotCov <- rotCov + cov05[1,1]/cov05[4,4]
+rotCov <- rotCov + cov06[1,1]/cov06[4,4]
+rotCov <- rotCov + cov07[1,1]/cov07[4,4]
+rotCov <- rotCov + cov08[1,1]/cov08[4,4]
+rotCov <- rotCov + cov09[1,1]/cov09[4,4]
+
+rotCov <- rotCov / 10
+
+rotStd <- 0
+
+rotStd <- rotStd + (rotCov - cov00[1,1]/cov00[4,4])^2
+rotStd <- rotStd + (rotCov - cov01[1,1]/cov01[4,4])^2
+rotStd <- rotStd + (rotCov - cov02[1,1]/cov02[4,4])^2
+rotStd <- rotStd + (rotCov - cov03[1,1]/cov03[4,4])^2
+rotStd <- rotStd + (rotCov - cov04[1,1]/cov04[4,4])^2
+rotStd <- rotStd + (rotCov - cov05[1,1]/cov05[4,4])^2
+rotStd <- rotStd + (rotCov - cov06[1,1]/cov06[4,4])^2
+rotStd <- rotStd + (rotCov - cov07[1,1]/cov07[4,4])^2
+rotStd <- rotStd + (rotCov - cov08[1,1]/cov08[4,4])^2
+rotStd <- rotStd + (rotCov - cov09[1,1]/cov09[4,4])^2
+ 
+rotStd <- sqrt(rotStd/10)
+
+write.table("#../ROutput/ --->> cov stdCov  cor stdCor rotCov rotStd", "data_cov_cor_s(-1,1)", append = TRUE)
+write.table(data.frame(covR), "data_cov_cor_s(-1,1)", append = TRUE)
+write.table(data.frame(stdV), "data_cov_cor_s(-1,1)", append = TRUE)
+write.table(data.frame(corR), "data_cov_cor_s(-1,1)", append = TRUE)
+write.table(data.frame(stdR), "data_cov_cor_s(-1,1)", append = TRUE)
+write.table(data.frame(rotCov), "data_cov_cor_s(-1,1)", append = TRUE)
+write.table(data.frame(rotStd), "data_cov_cor_s(-1,1)", append = TRUE)
+
+resTable <- matrix(nrow = 1, ncol = 15)
+resTable[1,1] <- 1.0
+resTable[1,2] <- covR[1,1]
+resTable[1,3] <- stdV[1,1]
+resTable[1,4] <- covR[2,2]
+resTable[1,5] <- stdV[2,2]
+resTable[1,6] <- covR[3,3]
+resTable[1,7] <- stdV[3,3]
+resTable[1,8] <- corR[2,1]
+resTable[1,9] <- stdR[2,1]
+resTable[1,10] <- corR[3,1]
+resTable[1,11] <- stdR[3,1]
+resTable[1,12] <- corR[3,2]
+resTable[1,13] <- stdR[3,2]
+resTable[1,14] <- rotCov
+resTable[1,15] <- rotStd
+
+write.table("#../ROutput/ --->> cov(1,1) stdCov rotCov(1,1->2,2) rotStd cor(1,2) stdCor", "data_result_table", append = TRUE)
+write.table(data.frame(resTable), "data_result_table", append = TRUE)

@@ -6,5 +6,7 @@ C++ and R source code for the article
 Madalina M. Drugan, Dirk Thierens:
 Geometrical Recombination Operators for Real-Coded Evolutionary MCMCs. Evol. Comput. 18(2): 157-198 (2010)
 
+The makefile puts the intup files together
+
 The statistical analysis is performed in R
 Examples of the output are the input for the R file 
